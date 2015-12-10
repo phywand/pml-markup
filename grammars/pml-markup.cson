@@ -1,0 +1,109 @@
+'scopeName': 'text.physics.pml'
+'name': 'Physics markup language'
+'fileTypes': [
+  'pml'
+]
+
+'patterns': [
+  {'include': '#structure'}
+  {'include': '#arrangecharacter'}
+  {'include': '#speech'}
+  {'include': '#graphic'}
+  {'include': '#listtable'}
+  {'include': '#header'}
+  {'include': '#relationships'}
+  {'include': '#physicalquantity'}
+  {'include': '#emphasisequote'}
+  {'include': '#links'}
+  {'include': '#htmlencoded'}
+]
+
+'repository':
+  'structure':
+    'patterns': [
+      {
+		# SPT pml structure
+        'match': '# StartNugget|## StartStep'
+        'name': 'text.physics.pml.pmlPhysics-structure'
+      }
+    ]
+  'arrangecharacter':
+    'patterns': [
+      {
+		# SPT pml arrangecharacter
+        'match': 'MultipliedBy|ArrowRight|EquivalentTo|ProportionalTo|CopyRight|ddt|Delta|SuperScript|LoHiScript|GroupThis|WordFraction'
+        'name': 'text.physics.pml.pmlPhysics-arrangecharacter'
+      }
+    ]
+  'speech':
+    'patterns': [
+      {
+		# SPT pml speech
+        'match': 'PupilSpeak|TeacherSpeak|SafetyTip|TeacherTip|WrongTrack|RightLines'
+        'name': 'text.physics.pml.pmlPhysics-speech'
+      }
+    ]
+  'graphic':
+    'patterns': [
+      {
+		# SPT pml graphic
+        'match': 'InsertGraphicWide|InsertGraphic|InsertSWF|InsertCMR|DIPiFrame'
+        'name': 'text.physics.pml.pmlPhysics-graphic'
+      }
+    ]
+  'listtable':
+    'patterns': [
+      {
+  	# SPT pml listtable
+        'match': 'BulletList|NumberList|CheckList|CharList|EndList|- ListItem|TableHeader|TableRow|StopTable|StartTable'
+        'name': 'text.physics.pml.pmlPhysics-listtable'
+      }
+    ]
+  'header':
+    'patterns': [
+      {
+		# SPT pml header
+        'match': '### PurposeHeader|### PrepareHeader|### WhatHappensHeader|### ThinkHeader|### SequenceHeaderDevelopIdea|### SequenceHeaderTripWires|### SequenceHeaderDoingPhysics|### SequenceHeaderCurriculumStatements|### SequenceHeaderReality'
+        'name': 'text.physics.pml.pmlPhysics-header'
+      }
+    ]
+  'relationships':
+    'patterns': [
+      {
+		# SPT pml relationships
+        'match': 'DifferenceABC|SumABC|ProductABCD|VectorProductABC|ProductABC|FractionABCD|FractionABCeqD|FractionAeqBCD|FractionABC|FractionCBA|FractionProduct|EqualityAssertion|AccumulateRelationship|EfficiencyCalc|BelsCalc|KineticCalc|AccumulateRelationship|InverseSquareWord|InverseSquare'
+        'name': 'text.physics.pml.pmlPhysics-relationships'
+      }
+    ]
+  'physicalquantity':
+    'patterns': [
+      {
+		# SPT pml physicalquantity
+        'match': 'UnitAbbreviate|UnitWord|SymbolSub|SymbolSuper|QuantitySymbol|WordSub|WordSuper|VectorSub|VectorOver|VectorMagnitude|VectorMatrix|QuantityWord|QuantityAbbreviate|WordExponent|QuantityExponent|WordSpread|QuantitySpread'
+        'name': 'text.physics.pml.pmlPhysics-physicalquantity'
+      }
+    ]
+  'emphasisequote':
+    'patterns': [
+      {
+		# SPT pml emphasisequote
+        'match': 'QuoteThis|EmphasiseThis|QuotationThis'
+        'name': 'text.physics.pml.pmlPhysics-emphasisequote'
+      }
+    ]
+  'links':
+    'patterns': [
+      {
+		# SPT pml links
+        'match': 'ViewClips|GetSupportSheet|GetSupportFile|LinkInternalTA|LinkInternalTL|LinkInternalPN|LinkPrint'
+        'name': 'text.physics.pml.pmlPhysics-links'
+      }
+    ]
+    'htmlencoded':
+      'patterns': [
+        {
+  		# SPT pml htmlencoded
+          'match': '&mdash;'
+          'name': 'text.physics.pml.pmlPhysics-htmlencoded'
+        }
+    ]
