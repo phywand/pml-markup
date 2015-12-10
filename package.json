@@ -1,15 +1,12 @@
 {
   "name": "pml-markup",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "description": "A means to markup pml files",
-  "keywords": [
-  ],
-
-  "repository": "https://github.com/atom/pml-markup",
+  "keywords": [],
+  "repository": "https://github.com/phywand/pml-markup.git",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
