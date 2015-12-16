@@ -1,13 +1,169 @@
 '.text.physics.pml':
-  'StartStep':
-    'prefix': 'sp'
-    'body': '## StartStep{$1}\n\n$2'
-  'StartNugget':
-    'prefix': 'sn'
-    'body': '# StartNugget{$1}{$2}\n\n$3'
+# lists
+  'CharList':
+   'prefix':'pmal'
+   'body': 'CharList\n$1'
+  'BulletList':
+   'prefix':'pmbl'
+   'body': 'BulletList\n$1'
+  'CheckList':
+   'prefix':'pmcl'
+   'body': 'CheckList\n$1'
+  'MultipleChoiceList':
+   'prefix':'pmml'
+   'body': 'MultipleChoiceList\n$1'
+  'NumberList':
+   'prefix':'pmnl'
+   'body': 'NumberList\n$1'
+  'EndList':
+   'prefix':'pmel'
+   'body': 'EndList\n$1'
+  'ListItem{item}':
+   'prefix':'pmli'
+   'body': '- ListItem{$1item}\n$2'
+# speechbubbles
+  'WrongTrack{phrases}':
+   'prefix':'pmwt'
+   'body': 'WrongTrack{$1}\n$2'
+  'RightLines{phrases}':
+   'prefix':'pmrl'
+   'body': 'RightLines{$1}\n$2'
+  'PupilSpeak{name}{speech}':
+   'prefix':'pmps'
+   'body': 'PupilSpeak{$1name}{$2speech}\n$3'
+  'SafetyTip{phrase}':
+   'prefix':'pmst'
+   'body': 'SafetyTip{$1phrase}\n$2'
+  'TeacherSpeak{speech}':
+   'prefix':'pmts'
+   'body': 'TeacherSpeak{$1speech}\n$2'
+  'TeacherTip{theTip}':
+   'prefix':'pmtt'
+   'body': 'TeacherTip{$1tip}\n$2'
+# text adornment
+  'EmphasiseThis{phrase}':
+   'prefix':'pmet'
+   'body': 'EmphasiseThis{$1phrase} $2'
+  'QuoteThis{phrase}':
+   'prefix':'pmqt'
+   'body': 'QuoteThis{$1phrase}\n$2'
+   'GroupThis{phrase}':
+    'prefix':'pmgt '
+    'body': 'GroupThis{$1phrase} $2'
+   'WordFraction{phrase}{phrase}':
+     'prefix':'pmwf'
+     'body': 'WordFraction{$1phrase}{$2phrase} $3'
+# encoded punctuation and specials
+  'ndash;':
+   'prefix':',,nd'
+   'body': '&ndash;'
+  'mdash;':
+   'prefix':',,md'
+   'body': '&mdash;'
+  'apostrophe':
+   'prefix':',,ap'
+   'body': '&apos;'
+   'ellipsis':
+    'prefix':',,el'
+    'body': '&hellip;'
+   'sdot':
+    'prefix':',,sd'
+    'body': '&sdot;'
+   'non-breaking space':
+    'prefix':',,sp'
+    'body': '&nbsp;'
+  ' RightArrow ':
+   'prefix':',,ra'
+   'body': ' RightArrow $1'
+  'MultipliedBy ':
+   'prefix':',,mb'
+   'body': ' MultipliedBy $1'
+# headers
+  '### ThinkHeader{Thinking about the learning}':
+   'prefix':'pmhtl'
+   'body': '### ThinkHeader{Thinking about the learning}\n$1'
+  '### ThinkHeader{Thinking about the teaching}':
+   'prefix':'pmhtt'
+   'body': '### ThinkHeader{Thinking about the teaching}\n$1'
+  '### PrepareHeader':
+   'prefix':'pmhac'
+   'body': '### PrepareHeader\n$1'
+  '### WhatHappensHeader':
+   'prefix':'pmhah'
+   'body': '### WhatHappensHeader\n$1'
+  '### PurposeHeader':
+   'prefix':'pmhap'
+   'body': '### PurposeHeader\n$1'
+# graphics
+  'InsertSWF{filename}':
+    'prefix':'pmswf '
+    'body': 'InsertSWF{$1filename}\n$2'
   'Graphic':
-    'prefix': 'ig'
+    'prefix': 'pmig'
     'body': 'InsertGraphic{$1}\n$2'
   'GraphicWide':
-    'prefix': 'igw'
+    'prefix': 'pmigw'
     'body': 'InsertGraphicWide{$1}\n$2'
+# physical quantities
+  'UnitWord{unitname}':
+   'prefix':'pmuw'
+   'body': 'UnitWord{$1unitname} $2'
+  'UnitAbbreviate{unitname}':
+   'prefix':'pmua'
+   'body': 'UnitAbbreviate{unitname} $2'
+  'QuantityWord{number}{unit}':
+   'prefix':'pmqw'
+   'body': 'QuantityWord{$1number}{$2unit} $3'
+  'QuantityAbbreviate{number}{unit}':
+   'prefix':'pmqa'
+   'body': 'QuantityAbbreviate{$1number}{$2unit} $3'
+  'QuantityExponent{number}{exponent}{unit}':
+   'prefix':'pmqe'
+   'body': 'QuantityExponent{number}{exponent}{unit}'
+  'QuantitySpread{$1start}{$2end}{$3unit} $4':
+   'prefix':'pmqs'
+   'body': 'QuantitySpread{$1start}{$2end}{$3unit} $4'
+   'QuantitySymbol{quantity}':
+    'prefix':'pmqy '
+    'body': 'QuantitySymbol{$1quantity} $2'
+   'SymbolSub{quantity}{subscript}':
+    'prefix':'pmqys '
+    'body': 'SymbolSub{$1quantity}{$2subscript} $3'
+   'WordExponent{number}{exponent}{unit}':
+    'prefix':'pmqew '
+    'body': 'WordExponent{$1number}{$2exponent}{$3unit} $4'
+   'WordSpread{start}{end}{unit}':
+    'prefix':'pmqsw '
+    'body': 'WordSpread{$1start}{$2end}{$3unit} $4'
+  'VectorMagnitude{character}':
+   'prefix':'pmmag'
+   'body': 'VectorMagnitude{$1character} $2'
+# links and files
+  'ViewClips{filename}':
+   'prefix':'pmvc'
+   'body': 'ViewClips{$1filename} $2'
+  ' GetSupportFile{filename}':
+   'prefix':'pmsf'
+   'body': ' GetSupportFile{$1filename}$2'
+  ' GetSupportSheet{filename}':
+   'prefix':'pmsu'
+   'body': ' GetSupportSheet{$1filename}$2'
+   'LinkInternalTA{link text}{URL}':
+    'prefix':'pmlfa '
+    'body': 'LinkInternalTA{$1link text}{$2URL}\n$3'
+   'LinkInternalTL{link text}{URL}':
+    'prefix':'pmlfl'
+    'body': 'LinkInternalTL{$1link text}{$2URL}\n$3'
+   'LinkInternalPN{link text}{URL}':
+    'prefix':''
+    'body': 'LinkInternalPN{$1link text}{$2URL}\n$3'
+   'link to printable':
+    'prefix':'pmlfs '
+    'body': 'LinkPrint{$1Support sheet}{$2filename}\n$3'
+#  structure
+  'StartStep':
+    'prefix': 'pmsp'
+    'body': '## StartStep{$1}\n\n$2'
+  'StartNugget':
+    'prefix': 'pmsn'
+    'body': '# StartNugget{$1}{$2}\n\n$3'
