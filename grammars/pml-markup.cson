@@ -2,6 +2,7 @@
 'name': 'Physics markup language'
 'fileTypes': [
   'pml'
+  'md'
 ]
 
 'patterns': [
@@ -16,6 +17,8 @@
   {'include': '#emphasisequote'}
   {'include': '#links'}
   {'include': '#htmlencoded'}
+  {'include': '#slides'}
+  {'include': '#slidestacks'}
 ]
 
 'repository':
@@ -47,7 +50,7 @@
     'patterns': [
       {
 		# SPT pml graphic
-        'match': 'InsertGraphicWide|InsertGraphic|InsertSWF|InsertCMR'
+        'match': 'InsertGraphicWide|InsertGraphic|InsertSWF|InsertCMR|URLGraphic|URLCMR'
         'name': 'text.physics.pml.pmlPhysics-graphic'
       }
     ]
@@ -63,7 +66,7 @@
     'patterns': [
       {
 		# SPT pml header
-        'match': '### PurposeHeader|### PrepareHeader|### WhatHappensHeader|### ThinkHeader|### SequenceHeaderDevelopIdea|### SequenceHeaderTripWires|### SequenceHeaderDoingPhysics|### SequenceHeaderCurriculumStatements|### SequenceHeaderReality'
+        'match': '### PurposeHeader|### PrepareHeader|### WhatHappensHeader|### ThinkHeader|### SequenceHeaderDevelopIdea|### SequenceHeaderTripWires|### SequenceHeaderDoingPhysics|### SequenceHeaderCurriculumStatements|### SequenceHeaderReality|FileName: |WebTitle: |### Preparation activities|### Activities to open up the session|### Main activities in the session|### Kit needed for participants (per group)|### Kit needed for leader|### Wrapping up the workshop|### Student learning enhanced|### Extra ideas for the well-prepared teacher|### Ideas the children have, which require attention|### Activities to share|### For further study in the TL|### For further study in the PN|### Session Specifics|### Reflections, after running the session|### Follow up activities|SlideNotes|### '
         'name': 'text.physics.pml.pmlPhysics-header'
       }
     ]
@@ -95,15 +98,31 @@
     'patterns': [
       {
 		# SPT pml links
-        'match': 'ViewClips|GetSupportSheet|GetSupportFile|LinkInternalTA|LinkInternalTL|LinkInternalPN|LinkPrint'
+        'match': 'ViewClips|GetSupportSheet|GetSupportFile|LinkInternalTA|LinkInternalTL|LinkInternalPN|LinkPrint|FrameNugget|FrameXBP|FrameDialogue|URLFrame|URLLinkPN|URLLinkTL|URLLinkTA'
         'name': 'text.physics.pml.pmlPhysics-links'
       }
     ]
-    'htmlencoded':
-      'patterns': [
-        {
-  		# SPT pml htmlencoded
-          'match': '&mdash;'
-          'name': 'text.physics.pml.pmlPhysics-htmlencoded'
-        }
+  'htmlencoded':
+    'patterns': [
+      {
+		# SPT pml htmlencoded
+        'match': '&mdash;'
+        'name': 'text.physics.pml.pmlPhysics-htmlencoded'
+      }
+    ]
+  'slidestacks':
+    'patterns': [
+      {
+		# SPT slides structure
+        'match': '# BeginANewSlideStack|# TerminateSlideStack'
+        'name': 'text.physics.pml.pmlPhysics-slidestacks'
+      }
+    ]
+  'slides':
+    'patterns': [
+      {
+    # SPT slides structure
+        'match': '## StartSlide|## StopSlide'
+        'name': 'text.physics.pml.pmlPhysics-slides'
+      }
     ]

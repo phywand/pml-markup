@@ -104,6 +104,9 @@
   'GraphicWide':
     'prefix': 'pmigw'
     'body': 'InsertGraphicWide{$1}\n$2'
+  'CMRX=NorPorL':
+    'prefix': 'pmic'
+    'body': 'InsertCMR{$1CMRX}\n$2'
 # physical quantities
   'UnitWord{unitname}':
    'prefix':'pmuw'
@@ -167,3 +170,9 @@
   'StartNugget':
     'prefix': 'pmsn'
     'body': '# StartNugget{$1}{$2}\n\n$3'
+  'SlideStack':
+    'prefix': 'pmss'
+    'body': '\n\n# BeginANewSlideStack\n\n## StartSlide\n\n$1Slide contents\n\n## StopSlide\n\n## StartSlide\n\nSlide contents\n\n## StopSlide\n\n## StartSlide\n\nSlide contents\n\n## StopSlide\n\n# TerminateSlideStack\n\n'
+  'SessionFrame':
+    'prefix': 'pmsf'
+    'body': 'FileName: \n\nWebTitle: \n\n### Preparation activities, without access to the SPT materials\n\n### Preparation activities, with access to the SPT materials\n\n### Activities to open up the session\n\n### Main activities in the session\n\n### Kit needed for leader\n\n### Wrapping up the workshop\n\n### Student learning enhanced\n\n### Extra ideas for the well-prepared teacher\n\n### Ideas the children have, which require attention\n\n### Activities to share\n\n### For further study in the TL\n\n### For further study in the PN\n\n### Session Specifics\n\n### Reflections, after running the session\n\n'
