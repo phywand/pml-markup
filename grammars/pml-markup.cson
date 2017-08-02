@@ -19,6 +19,7 @@
   {'include': '#htmlencoded'}
   {'include': '#slides'}
   {'include': '#slidestacks'}
+  {'include': '#coachwords'}
 ]
 
 'repository':
@@ -34,7 +35,7 @@
     'patterns': [
       {
 		# SPT pml arrangecharacter
-        'match': 'MultipliedBy|ArrowRight|EquivalentTo|ProportionalTo|CopyRight|ddt|Delta|SuperScript|LoHiScript|GroupThis|WordFraction'
+        'match': 'MultipliedBy|ArrowRight|EquivalentTo|ProportionalTo|CopyRight|ddt|Delta|SuperScript|LoHiScript|GroupThis|WordFraction|LineBreak|EnDash|InsertEllipsis'
         'name': 'text.physics.pml.pmlPhysics-arrangecharacter'
       }
     ]
@@ -42,7 +43,7 @@
     'patterns': [
       {
 		# SPT pml speech
-        'match': 'PupilSpeak|TeacherSpeak|SafetyTip|TeacherTip|WrongTrack|RightLines'
+        'match': 'PupilSpeak|TeacherSpeak|JustSpeak|SafetyTip|TeacherTip|WrongTrack|RightLines'
         'name': 'text.physics.pml.pmlPhysics-speech'
       }
     ]
@@ -50,7 +51,7 @@
     'patterns': [
       {
 		# SPT pml graphic
-        'match': 'InsertGraphicWide|InsertGraphic|InsertSWF|InsertCMR|URLGraphic|URLCMR'
+        'match': 'InsertGraphicWide|InsertGraphic|InsertSWF|InsertCMR|URLGraphic|URLCMR|URLFrameShowCMR|URLFrameEditCMR|InsertClip'
         'name': 'text.physics.pml.pmlPhysics-graphic'
       }
     ]
@@ -106,7 +107,7 @@
     'patterns': [
       {
 		# SPT pml htmlencoded
-        'match': '&mdash;'
+        'match': '&mdash;|&hellip;|&nbsp;|&ndash;&apos;'
         'name': 'text.physics.pml.pmlPhysics-htmlencoded'
       }
     ]
@@ -124,5 +125,13 @@
     # SPT slides structure
         'match': '## StartSlide|## StopSlide'
         'name': 'text.physics.pml.pmlPhysics-slides'
+      }
+    ]
+  'coachwords':
+    'patterns': [
+      {
+    # SPT coachwords
+        'match': '|CoachComment: |PlanBlockNoLink|PlanBlock|GuideBlockNoLink|GuideBlock'
+        'name': 'text.physics.pml.pmlPhysics-coachwords'
       }
     ]

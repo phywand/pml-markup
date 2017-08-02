@@ -37,6 +37,9 @@
   'TeacherSpeak{speech}':
    'prefix':'pmts'
    'body': 'TeacherSpeak{$1speech}\n$2'
+  'JustSpeak{speech}':
+   'prefix':'pmjs'
+   'body': 'JustSpeak{$1speech}\n$2'
   'TeacherTip{theTip}':
    'prefix':'pmtt'
    'body': 'TeacherTip{$1tip}\n$2'
@@ -47,10 +50,13 @@
   'QuoteThis{phrase}':
    'prefix':'pmqt'
    'body': 'QuoteThis{$1phrase}\n$2'
-   'GroupThis{phrase}':
+  'QuotationThis{phrase}':
+   'prefix':'pmqn'
+   'body': 'QuotationThis{$1phrase}\n$2'
+  'GroupThis{phrase}':
     'prefix':'pmgt '
     'body': 'GroupThis{$1phrase} $2'
-   'WordFraction{phrase}{phrase}':
+  'WordFraction{phrase}{phrase}':
      'prefix':'pmwf'
      'body': 'WordFraction{$1phrase}{$2phrase} $3'
 # encoded punctuation and specials
@@ -72,9 +78,9 @@
    'non-breaking space':
     'prefix':',,sp'
     'body': '&nbsp;'
-  ' RightArrow ':
+  ' ArrowRight ':
    'prefix':',,ra'
-   'body': ' RightArrow $1'
+   'body': ' ArrowRight $1'
   'MultipliedBy ':
    'prefix':',,mb'
    'body': ' MultipliedBy $1'
@@ -85,6 +91,9 @@
   '### ThinkHeader{Thinking about the teaching}':
    'prefix':'pmhtt'
    'body': '### ThinkHeader{Thinking about the teaching}\n$1'
+  '### ThinkHeader{SomeThing}':
+   'prefix':'pmhta'
+   'body': '### ThinkHeader{$1}\n$2'
   '### PrepareHeader':
    'prefix':'pmhac'
    'body': '### PrepareHeader\n$1'
@@ -107,6 +116,9 @@
   'CMRX=NorPorL':
     'prefix': 'pmic'
     'body': 'InsertCMR{$1CMRX}\n$2'
+  'clip':
+    'prefix': 'pmim'
+    'body': 'InsertClip{$1filename}{width$2}{height$3}\n$4'
 # physical quantities
   'UnitWord{unitname}':
    'prefix':'pmuw'
@@ -126,18 +138,21 @@
   'QuantitySpread{$1start}{$2end}{$3unit} $4':
    'prefix':'pmqs'
    'body': 'QuantitySpread{$1start}{$2end}{$3unit} $4'
-   'QuantitySymbol{quantity}':
-    'prefix':'pmqy '
-    'body': 'QuantitySymbol{$1quantity} $2'
-   'SymbolSub{quantity}{subscript}':
-    'prefix':'pmqys '
-    'body': 'SymbolSub{$1quantity}{$2subscript} $3'
-   'WordExponent{number}{exponent}{unit}':
-    'prefix':'pmqew '
-    'body': 'WordExponent{$1number}{$2exponent}{$3unit} $4'
-   'WordSpread{start}{end}{unit}':
-    'prefix':'pmqsw '
-    'body': 'WordSpread{$1start}{$2end}{$3unit} $4'
+  'QuantitySymbol{quantity}':
+   'prefix':'pmqy '
+   'body': 'QuantitySymbol{$1quantity} $2'
+  'SymbolSub{quantity}{subscript}':
+   'prefix':'pmqysub'
+   'body': 'SymbolSub{$1quantity}{$2subscript} $3'
+  'SymbolSuper{quantity}{subscript}':
+   'prefix':'pmqysup'
+   'body': 'SymbolSuper{$1quantity}{$2subscript} $3'
+  'WordExponent{number}{exponent}{unit}':
+   'prefix':'pmqew '
+   'body': 'WordExponent{$1number}{$2exponent}{$3unit} $4'
+  'WordSpread{start}{end}{unit}':
+   'prefix':'pmqsw '
+   'body': 'WordSpread{$1start}{$2end}{$3unit} $4'
   'VectorMagnitude{character}':
    'prefix':'pmmag'
    'body': 'VectorMagnitude{$1character} $2'
@@ -151,18 +166,52 @@
   ' GetSupportSheet{filename}':
    'prefix':'pmsu'
    'body': ' GetSupportSheet{$1filename}$2'
-   'LinkInternalTA{link text}{URL}':
+  'LinkInternalTA{link text}{URL}':
     'prefix':'pmlfa '
     'body': 'LinkInternalTA{$1link text}{$2URL}\n$3'
-   'LinkInternalTL{link text}{URL}':
+  'LinkInternalTL{link text}{URL}':
     'prefix':'pmlfl'
     'body': 'LinkInternalTL{$1link text}{$2URL}\n$3'
-   'LinkInternalPN{link text}{URL}':
-    'prefix':''
+  'LinkInternalPN{link text}{URL}':
+    'prefix':'pmlfp'
     'body': 'LinkInternalPN{$1link text}{$2URL}\n$3'
-   'link to printable':
+  'URLLinkPN{link text}{URL}':
+     'prefix':'pmurlfp'
+     'body': 'URLLinkPN{$1link text}{$2URL}\n$3'
+  'URLFrameShowCMR{Full URL}{width}{height}':
+    'prefix': 'pmurlshowcmr'
+    'body': 'URLFrameShowCMR{$1}{$2}{$3}\n$4'
+  'URLFrameEditCMR{Full URL}{width}{height}':
+    'prefix': 'pmurleditcmr'
+    'body': 'URLFrameEditCMR{$1}{$2}{$3}\n$4'
+  'URLGraphic{Full URL}':
+    'prefix': 'pmurlgraphic'
+    'body': 'URLGraphic{$1}\n$2'
+  'URLCMR{Full URL}{width}{height}':
+    'prefix': 'pmurlcmr'
+    'body': 'URLCMR{$1}\n$2'
+  'FrameNugget{Full URL}{width}{height}':
+    'prefix': 'pmfn'
+    'body': 'FrameNugget{$1}\n$2'
+  'FrameXBP{Full URL}{width}{height}':
+    'prefix': 'pmfx'
+    'body': 'FrameXBP{$1}\n$2'
+  'FrameDialogue{Full URL}{width}{height}':
+    'prefix': 'pmfd'
+    'body': 'FrameDialogue{$1}\n$2'
+  'link to printable':
     'prefix':'pmlfs '
     'body': 'LinkPrint{$1Support sheet}{$2filename}\n$3'
+# coachwords
+  'plan block':
+    'prefix':'pmcp '
+    'body': 'PlanBlock{$1Description}{$2URL}{$3FourFacetScores04}{$4CoachCommentary}{$5EstimatedDuration}\n$6'
+  'guide block':
+    'prefix':'pmcb '
+    'body': 'GuideBlock{$1title}{$2link}{$4comment}\n$4'
+  'coach comment':
+    'prefix':'pmcc '
+    'body': 'CoachComment: $1\n$2'
 #  structure
   'StartStep':
     'prefix': 'pmsp'
