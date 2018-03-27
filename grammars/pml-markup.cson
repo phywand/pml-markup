@@ -6,132 +6,78 @@
 ]
 
 'patterns': [
-  {'include': '#structure'}
-  {'include': '#arrangecharacter'}
-  {'include': '#speech'}
-  {'include': '#graphic'}
-  {'include': '#listtable'}
-  {'include': '#header'}
-  {'include': '#relationships'}
-  {'include': '#physicalquantity'}
-  {'include': '#emphasisequote'}
-  {'include': '#links'}
-  {'include': '#htmlencoded'}
-  {'include': '#slides'}
-  {'include': '#slidestacks'}
-  {'include': '#coachwords'}
+  {'include': '#HeaderListTable'}
+  {'include': '#LinkGraphic'}
+  {'include': '#SpeechBubble'}
+  {'include': '#TechnicalExpression'}
+  {'include': '#Relationship'}
+  {'include': '#AddGlyph'}
+  {'include': '#StylePhrase'}
+  {'include': '#AddSpacing'}
+  {'include': '#MakeComment'}
 ]
 
 'repository':
-  'structure':
+  'HeaderListTable':
     'patterns': [
       {
-		# SPT pml structure
-        'match': '# StartNugget|## StartStep'
-        'name': 'text.physics.pml.pmlPhysics-structure'
+        'match': 'FileName:|WebTitle|StepHeader|ThinkHeader|ListInformationEnd|ListInformation|ListSequenceEnd|ListSequence|ListEquipmentEnd|ListEquipment|StartTable|TableHeader|TableRow|StopTable'
+        'name': 'text.physics.pml.pmlPhysics-HeaderListTable'
       }
     ]
-  'arrangecharacter':
+  'LinkGraphic':
     'patterns': [
       {
-		# SPT pml arrangecharacter
-        'match': 'MultipliedBy|ArrowRight|EquivalentTo|ProportionalTo|CopyRight|ddt|Delta|SuperScript|LoHiScript|GroupThis|WordFraction|LineBreak|EnDash|InsertEllipsis'
-        'name': 'text.physics.pml.pmlPhysics-arrangecharacter'
+        'match': 'InsertGraphic|InsertLinkPN|InsertLinkTL|InsertLinkTA|InsertLink|URLLink'
+        'name': 'text.physics.pml.pmlPhysics-LinkGraphic'
       }
     ]
-  'speech':
+  'SpeechBubble':
     'patterns': [
       {
-		# SPT pml speech
-        'match': 'PupilSpeak|TeacherSpeak|JustSpeak|SafetyTip|TeacherTip|WrongTrack|RightLines'
-        'name': 'text.physics.pml.pmlPhysics-speech'
+        'match': 'TeacherOne|TeacherTwo|TeacherThree|TeacherSpeak|TeacherTip|PupilSpeak|JustSpeak|WrongTrack|RightLines'
+        'name': 'text.physics.pml.pmlPhysics-SpeechBubble'
       }
     ]
-  'graphic':
+  'TechnicalExpression':
     'patterns': [
       {
-		# SPT pml graphic
-        'match': 'InsertGraphicWide|InsertGraphic|InsertSWF|InsertCMR|URLGraphic|URLCMR|URLFrameShowCMR|URLFrameEditCMR|InsertClip'
-        'name': 'text.physics.pml.pmlPhysics-graphic'
+        'match': 'QuantitySymbol|QuantitySub|QuantitySuper|NPNucleus|VectorSub|VectorOver|VectorMagnitude|QuantitySymbol|FractionBlock|FractionRoot|JustUnit|NumberRoot|NumberSuper|QuantityExponent|QuantityOrder|QuantityRange|QuantityRoot|QuantityUnit|QuantityValue|ValueExponent|ValueOrder|ValueRange|ValueUnit|VectorMatrix|WordSub|WordSuper|GroupBlock'
+        'name': 'text.physics.pml.pmlPhysics-TechnicalExpression'
       }
     ]
-  'listtable':
+  'Relationship':
     'patterns': [
       {
-  	# SPT pml listtable
-        'match': 'BulletList|NumberList|CheckList|CharList|EndList|- ListItem|TableHeader|TableRow|StopTable|StartTable'
-        'name': 'text.physics.pml.pmlPhysics-listtable'
+        'match': 'DifferenceABC|SumABC|ProductABeqCD|ProductQuantityABC|ProductABC|ProductQuantityAnBC|ProductAnBC|EqualityAssertion|FractionAdBeqCdD|FractionQuantityAnBC|FractionQuantityABC|FractionAnBC|FractionABC|FractionQuantityBdCeqA|FractionBdCeqA|FractionAdBeqCDdEF|EfficiencyCalc|AccumulateRelationship'
+        'name': 'text.physics.pml.pmlPhysics-Relationship'
       }
     ]
-  'header':
+  'AddGlyph':
     'patterns': [
       {
-		# SPT pml header
-        'match': '### PurposeHeader|### PrepareHeader|### WhatHappensHeader|### ThinkHeader|FileName: |WebTitle: |PageDescription: |PageWrapper: |PrintPages: |PrintOrientation: |TeacherTwo: |TeacherThree: |TeacherOne: |### Preparation activities, before the session|### Follow up activities, after the session|### Student learning enhanced|### Ideas the children have, which require attention|### Links to activities to share|### To find out more about the teaching and learning issues|### To look further into this approach to the physics|### Activities to open up the session|### Main activities in the session|### Kit to prepare|### Wrapping up the session|### Reflections, after running this session|## QS: Posed question|## IC: Developing|## CW: Connections to the lived-in world|## RR: Representing and reasoning: doing physics|## TS: Teaching sequence sketch|SlideNotes|### |## '
-        'name': 'text.physics.pml.pmlPhysics-header'
+        'match': 'SymbolDelta|SymbolDifferential|SymbolPlusorminus|SymbolPositive|SymbolNegative|SymbolProportion|SymbolEquivalent|SymbolMultipliedby|SymbolMinus|SymbolPlus|SymbolArrowright|SymbolEqual|SymbolPi|SymbolCopyright|SymbolEndash|SymbolHalf|SymbolQuarter|SymbolAlpha|SymbolBeta|SymbolGamma|SymbolPercent|SymbolDegree|SymbolTemperaturecentigrade|SymbolOhm|SymbolAngle|SymbolAngularv|SymbolAngulara|SymbolWavelength|SymbolDensity|SymbolFlux|SymbolEpsilon|SymbolMu|SymbolSigma|SymbolStrain|SymbolStress|UcAlpha|UcBeta|UcGamma|UcDelta|UcEpsilon|UcZeta|UcEta|UcTheta|UcIota|UcKappa|UcLambda|UcMu|UcNu|UcXi|UcOmicron|UcPi|UcRho|UcSigma|UcTau|UcUpsilon|UcPhi|UcChi|UcPsi|UcOmega|LcAlpha|LcBeta|LcGamma|LcDelta|LcEpsilon|LcZeta|LcEta|LcTheta|LcIota|LcKappa|LcLambda|LcMu|LcNu|LcXi|LcOmicron|LcPi|LcRho|LcSigma|LcTau|LcUpsilon|LcPhi|LcChi|LcPsi|LcOmega'
+        'name': 'text.physics.pml.pmlPhysics-AddGlyph'
       }
     ]
-  'relationships':
+  'StylePhrase':
     'patterns': [
       {
-		# SPT pml relationships
-        'match': 'DifferenceABC|SumABC|ProductABCD|VectorProductABC|ProductABC|FractionABCD|FractionABCeqD|FractionAeqBCD|FractionABC|FractionCBA|FractionProduct|EqualityAssertion|AccumulateRelationship|EfficiencyCalc|BelsCalc|KineticCalc|AccumulateRelationship|InverseSquareWord|InverseSquare'
-        'name': 'text.physics.pml.pmlPhysics-relationships'
+        'match': 'AttributeThis|QuoteThis|EmphasiseThis|QuotationThis|SafetyTested|SafetyTip'
+        'name': 'text.physics.pml.pmlPhysics-StylePhrase'
       }
     ]
-  'physicalquantity':
+  'AddSpacing':
     'patterns': [
       {
-		# SPT pml physicalquantity
-        'match': 'UnitAbbreviate|UnitWord|SymbolSub|SymbolSuper|QuantitySymbol|WordSub|WordSuper|VectorSub|VectorOver|VectorMagnitude|VectorMatrix|QuantityWord|QuantityAbbreviate|WordExponent|QuantityExponent|WordSpread|QuantitySpread'
-        'name': 'text.physics.pml.pmlPhysics-physicalquantity'
+        'match': 'SpacingLinebreak|SpacingParabreak|SpacingThinspace|SpacingNonbreakspace'
+        'name': 'text.physics.pml.pmlPhysics-AddSpacing'
       }
     ]
-  'emphasisequote':
+  'MakeComment':
     'patterns': [
       {
-		# SPT pml emphasisequote
-        'match': 'QuoteThis|EmphasiseThis|QuotationThis'
-        'name': 'text.physics.pml.pmlPhysics-emphasisequote'
-      }
-    ]
-  'links':
-    'patterns': [
-      {
-		# SPT pml links
-        'match': 'ViewClips|GetSupportSheet|GetSupportFile|LinkInternalTA|LinkInternalTL|LinkInternalPN|LinkPrint|FrameNugget|FrameXBP|FrameDialogue|URLFrame|URLLinkPN|URLLinkTL|URLLinkTA'
-        'name': 'text.physics.pml.pmlPhysics-links'
-      }
-    ]
-  'htmlencoded':
-    'patterns': [
-      {
-		# SPT pml htmlencoded
-        'match': '&mdash;|&hellip;|&nbsp;|&ndash;&apos;'
-        'name': 'text.physics.pml.pmlPhysics-htmlencoded'
-      }
-    ]
-  'slidestacks':
-    'patterns': [
-      {
-		# SPT slides structure
-        'match': '# BeginANewSlideStack|# TerminateSlideStack'
-        'name': 'text.physics.pml.pmlPhysics-slidestacks'
-      }
-    ]
-  'slides':
-    'patterns': [
-      {
-    # SPT slides structure
-        'match': '## StartSlide|## StopSlide'
-        'name': 'text.physics.pml.pmlPhysics-slides'
-      }
-    ]
-  'coachwords':
-    'patterns': [
-      {
-    # SPT coachwords
-        'match': '|CoachComment: |PlanBlockNoLink|PlanBlock|GuideBlockNoLink|GuideBlock'
-        'name': 'text.physics.pml.pmlPhysics-coachwords'
+        'match': '(^#+ .*)|({\\+\\+.*\\+\\+})|({--.*--})|({==.*==})|({>>.*<<})|({~~.*~>.*~~})'
+        'name': 'text.physics.pml.pmlPhysics-MakeComment'
       }
     ]

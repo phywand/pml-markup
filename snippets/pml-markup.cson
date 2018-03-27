@@ -1,227 +1,178 @@
 '.text.physics.pml':
-# lists
-  'CharList':
-   'prefix':'pmal'
-   'body': 'CharList\n$1'
-  'BulletList':
-   'prefix':'pmbl'
-   'body': 'BulletList\n$1'
-  'CheckList':
-   'prefix':'pmcl'
-   'body': 'CheckList\n$1'
-  'MultipleChoiceList':
-   'prefix':'pmml'
-   'body': 'MultipleChoiceList\n$1'
-  'NumberList':
-   'prefix':'pmnl'
-   'body': 'NumberList\n$1'
-  'EndList':
-   'prefix':'pmel'
-   'body': 'EndList\n$1'
-  'ListItem{item}':
-   'prefix':'pmli'
-   'body': '- ListItem{$1item}\n$2'
-# speechbubbles
-  'WrongTrack{phrases}':
-   'prefix':'pmwt'
-   'body': 'WrongTrack{$1}\n$2'
-  'RightLines{phrases}':
-   'prefix':'pmrl'
-   'body': 'RightLines{$1}\n$2'
-  'PupilSpeak{name}{speech}':
-   'prefix':'pmps'
-   'body': 'PupilSpeak{$1name}{$2speech}\n$3'
-  'SafetyTip{phrase}':
-   'prefix':'pmst'
-   'body': 'SafetyTip{$1phrase}\n$2'
-  'TeacherSpeak{speech}':
-   'prefix':'pmts'
-   'body': 'TeacherSpeak{$1speech}\n$2'
-  'JustSpeak{speech}':
-   'prefix':'pmjs'
-   'body': 'JustSpeak{$1speech}\n$2'
-  'TeacherTip{theTip}':
-   'prefix':'pmtt'
-   'body': 'TeacherTip{$1tip}\n$2'
-# text adornment
-  'EmphasiseThis{phrase}':
-   'prefix':'pmet'
-   'body': 'EmphasiseThis{$1phrase} $2'
-  'QuoteThis{phrase}':
-   'prefix':'pmqt'
-   'body': 'QuoteThis{$1phrase}\n$2'
-  'QuotationThis{phrase}':
-   'prefix':'pmqn'
-   'body': 'QuotationThis{$1phrase}\n$2'
-  'GroupThis{phrase}':
-    'prefix':'pmgt '
-    'body': 'GroupThis{$1phrase} $2'
-  'WordFraction{phrase}{phrase}':
-     'prefix':'pmwf'
-     'body': 'WordFraction{$1phrase}{$2phrase} $3'
-# encoded punctuation and specials
-  'ndash;':
-   'prefix':',,nd'
-   'body': '&ndash;'
-  'mdash;':
-   'prefix':',,md'
-   'body': '&mdash;'
-  'apostrophe':
-   'prefix':',,ap'
-   'body': '&apos;'
-   'ellipsis':
-    'prefix':',,el'
-    'body': '&hellip;'
-   'sdot':
-    'prefix':',,sd'
-    'body': '&sdot;'
-   'non-breaking space':
-    'prefix':',,sp'
-    'body': '&nbsp;'
-  ' ArrowRight ':
-   'prefix':',,ra'
-   'body': ' ArrowRight $1'
-  'MultipliedBy ':
-   'prefix':',,mb'
-   'body': ' MultipliedBy $1'
-# headers
-  '### ThinkHeader{Thinking about the learning}':
-   'prefix':'pmhtl'
-   'body': '### ThinkHeader{Thinking about the learning}\n$1'
-  '### ThinkHeader{Thinking about the teaching}':
-   'prefix':'pmhtt'
-   'body': '### ThinkHeader{Thinking about the teaching}\n$1'
-  '### ThinkHeader{SomeThing}':
-   'prefix':'pmhta'
-   'body': '### ThinkHeader{$1}\n$2'
-  '### PrepareHeader':
-   'prefix':'pmhac'
-   'body': '### PrepareHeader\n$1'
-  '### WhatHappensHeader':
-   'prefix':'pmhah'
-   'body': '### WhatHappensHeader\n$1'
-  '### PurposeHeader':
-   'prefix':'pmhap'
-   'body': '### PurposeHeader\n$1'
-# graphics
-  'InsertSWF{filename}':
-    'prefix':'pmswf '
-    'body': 'InsertSWF{$1filename}\n$2'
-  'Graphic':
-    'prefix': 'pmig'
-    'body': 'InsertGraphic{$1}\n$2'
-  'GraphicWide':
-    'prefix': 'pmigw'
-    'body': 'InsertGraphicWide{$1}\n$2'
-  'CMRX=NorPorL':
-    'prefix': 'pmic'
-    'body': 'InsertCMR{$1CMRX}\n$2'
-  'clip':
-    'prefix': 'pmim'
-    'body': 'InsertClip{$1filename}{width$2}{height$3}\n$4'
-# physical quantities
-  'UnitWord{unitname}':
-   'prefix':'pmuw'
-   'body': 'UnitWord{$1unitname} $2'
-  'UnitAbbreviate{unitname}':
-   'prefix':'pmua'
-   'body': 'UnitAbbreviate{unitname} $2'
-  'QuantityWord{number}{unit}':
-   'prefix':'pmqw'
-   'body': 'QuantityWord{$1number}{$2unit} $3'
-  'QuantityAbbreviate{number}{unit}':
-   'prefix':'pmqa'
-   'body': 'QuantityAbbreviate{$1number}{$2unit} $3'
-  'QuantityExponent{number}{exponent}{unit}':
-   'prefix':'pmqe'
-   'body': 'QuantityExponent{number}{exponent}{unit}'
-  'QuantitySpread{$1start}{$2end}{$3unit} $4':
-   'prefix':'pmqs'
-   'body': 'QuantitySpread{$1start}{$2end}{$3unit} $4'
-  'QuantitySymbol{quantity}':
-   'prefix':'pmqy '
-   'body': 'QuantitySymbol{$1quantity} $2'
-  'SymbolSub{quantity}{subscript}':
-   'prefix':'pmqysub'
-   'body': 'SymbolSub{$1quantity}{$2subscript} $3'
-  'SymbolSuper{quantity}{subscript}':
-   'prefix':'pmqysup'
-   'body': 'SymbolSuper{$1quantity}{$2subscript} $3'
-  'WordExponent{number}{exponent}{unit}':
-   'prefix':'pmqew '
-   'body': 'WordExponent{$1number}{$2exponent}{$3unit} $4'
-  'WordSpread{start}{end}{unit}':
-   'prefix':'pmqsw '
-   'body': 'WordSpread{$1start}{$2end}{$3unit} $4'
-  'VectorMagnitude{character}':
-   'prefix':'pmmag'
-   'body': 'VectorMagnitude{$1character} $2'
-# links and files
-  'ViewClips{filename}':
-   'prefix':'pmvc'
-   'body': 'ViewClips{$1filename} $2'
-  ' GetSupportFile{filename}':
-   'prefix':'pmsf'
-   'body': ' GetSupportFile{$1filename}$2'
-  ' GetSupportSheet{filename}':
-   'prefix':'pmsu'
-   'body': ' GetSupportSheet{$1filename}$2'
-  'LinkInternalTA{link text}{URL}':
-    'prefix':'pmlfa '
-    'body': 'LinkInternalTA{$1link text}{$2URL}\n$3'
-  'LinkInternalTL{link text}{URL}':
-    'prefix':'pmlfl'
-    'body': 'LinkInternalTL{$1link text}{$2URL}\n$3'
-  'LinkInternalPN{link text}{URL}':
-    'prefix':'pmlfp'
-    'body': 'LinkInternalPN{$1link text}{$2URL}\n$3'
-  'URLLinkPN{link text}{URL}':
-     'prefix':'pmurlfp'
-     'body': 'URLLinkPN{$1link text}{$2URL}\n$3'
-  'URLFrameShowCMR{Full URL}{width}{height}':
-    'prefix': 'pmurlshowcmr'
-    'body': 'URLFrameShowCMR{$1}{$2}{$3}\n$4'
-  'URLFrameEditCMR{Full URL}{width}{height}':
-    'prefix': 'pmurleditcmr'
-    'body': 'URLFrameEditCMR{$1}{$2}{$3}\n$4'
-  'URLGraphic{Full URL}':
-    'prefix': 'pmurlgraphic'
-    'body': 'URLGraphic{$1}\n$2'
-  'URLCMR{Full URL}{width}{height}':
-    'prefix': 'pmurlcmr'
-    'body': 'URLCMR{$1}\n$2'
-  'FrameNugget{Full URL}{width}{height}':
-    'prefix': 'pmfn'
-    'body': 'FrameNugget{$1}\n$2'
-  'FrameXBP{Full URL}{width}{height}':
-    'prefix': 'pmfx'
-    'body': 'FrameXBP{$1}\n$2'
-  'FrameDialogue{Full URL}{width}{height}':
-    'prefix': 'pmfd'
-    'body': 'FrameDialogue{$1}\n$2'
-  'link to printable':
-    'prefix':'pmlfs '
-    'body': 'LinkPrint{$1Support sheet}{$2filename}\n$3'
-# coachwords
-  'plan block':
-    'prefix':'pmcp '
-    'body': 'PlanBlock{$1Description}{$2URL}{$3FourFacetScores04}{$4CoachCommentary}{$5EstimatedDuration}\n$6'
-  'guide block':
-    'prefix':'pmcb '
-    'body': 'GuideBlock{$1title}{$2link}{$4comment}\n$4'
-  'coach comment':
-    'prefix':'pmcc '
-    'body': 'CoachComment: $1\n$2'
-#  structure
-  'StartStep':
-    'prefix': 'pmsp'
-    'body': '## StartStep{$1}\n\n$2'
-  'StartNugget':
-    'prefix': 'pmsn'
-    'body': '# StartNugget{$1}{$2}\n\n$3'
-  'SlideStack':
-    'prefix': 'pmss'
-    'body': '\n\n# BeginANewSlideStack\n\n## StartSlide\n\n$1Slide contents\n\n## StopSlide\n\n## StartSlide\n\nSlide contents\n\n## StopSlide\n\n## StartSlide\n\nSlide contents\n\n## StopSlide\n\n# TerminateSlideStack\n\n'
-  'SessionFrame':
-    'prefix': 'pmsf'
-    'body': 'FileName: \n\nWebTitle: \n\n### Preparation activities, without access to the SPT materials\n\n### Preparation activities, with access to the SPT materials\n\n### Activities to open up the session\n\n### Main activities in the session\n\n### Kit needed for leader\n\n### Wrapping up the workshop\n\n### Student learning enhanced\n\n### Extra ideas for the well-prepared teacher\n\n### Ideas the children have, which require attention\n\n### Activities to share\n\n### For further study in the TL\n\n### For further study in the PN\n\n### Session Specifics\n\n### Reflections, after running the session\n\n'
+  'InsertGraphic':
+    'prefix': 'pmlInsertGraphic'
+    'body': 'InsertGraphic{$1locallink}'
+  'InsertLink':
+    'prefix': 'pmlInsertLink'
+    'body': 'InsertLink{$1locallink}'
+  'QuantitySub':
+    'prefix': 'QuantitySub'
+    'body': 'QuantitySub{$1letter}{subscript} '
+  'QuantitySuper':
+      'prefix': 'pmlQuantitySuper'
+      'body': 'QuantitySuper{$1letter}{superscript} '
+  'WordSub':
+      'prefix': 'pmlWordSub'
+      'body': 'WordSub{$1phrase}{subscript} '
+  'WordSuper':
+      'prefix': 'pmlWordSuper'
+      'body': 'WordSuper{$1phrase}{superscript} '
+  'NPNucleus':
+      'prefix': 'pmlNPNucleus'
+      'body': 'NPNucleus{$1nucleonNumber}{protonNumber}{nucleus} '
+  'VectorOver':
+      'prefix': 'pmlVectorOver'
+      'body': 'VectorOver{$1letter} '
+  'VectorSub':
+      'prefix': 'pmlVectorSub'
+      'body': 'VectorSub{$1letter}{subscript} '
+  'VectorMagnitude':
+      'prefix': 'pmlVectorMagnitude'
+      'body': 'VectorMagnitude{$1letter} '
+  'QuantitySymbol':
+      'prefix': 'pmlQuantitySymbol'
+      'body': 'QuantitySymbol{$1letter} '
+  'QuantityUnit':
+      'prefix': 'pmlQuantityUnit'
+      'body': 'QuantityUnit{$1number}{unit} '
+  'QuantityExponent':
+      'prefix': 'pmlQuantityExponent'
+      'body': 'QuantityExponent{$1number}{exponent}{unit} '
+  'QuantityRange':
+      'prefix': 'pmlQuantityRange'
+      'body': 'QuantityRange{$1start}{end}{unit} '
+  'QuantityValue':
+      'prefix': 'pmlQuantityValue'
+      'body': 'QuantityValue{$1letter}{number}{unit} '
+  'QuantityOrder':
+      'prefix': 'pmlQuantityOrder'
+      'body': 'QuantityOrder{$1letter}{exponent}{unit} '
+  'JustUnit':
+      'prefix': 'pmlJustUnit'
+      'body': 'JustUnit{$1unit} '
+  'GroupBlock':
+      'prefix': 'pmlGroupBlock'
+      'body': 'GroupBlock{$1ThePhrase} '
+  'FractionBlock':
+      'prefix': 'pmlFractionBlock'
+      'body': 'FractionBlock{$1word}{word} '
+  'QuantityRoot':
+      'prefix': 'pmlQuantityRoot'
+      'body': 'QuantityRoot{$1letter} '
+  'FractionRoot':
+      'prefix': 'pmlFractionRoot'
+      'body': 'FractionRoot{$1letter}{letter} '
+  'FractionQuantity':
+      'prefix': 'pmlFractionQuantity'
+      'body': 'FractionBlock{$1QuantitySymbol{letter}}{QuantitySymbol{letter}} '
+  'FractionQuantitysuper':
+      'prefix': 'pmlFractionQuantitysuper'
+      'body': 'FractionBlock{$1QuantitySuper{letter}{superscript}}{QuantitySuper{letter}{superscript}} '
+  'DifferenceABC':
+      'prefix': 'pmlDifferenceABC'
+      'body': 'DifferenceABC{$1A}{B}{C} '
+  'SumABC':
+      'prefix': 'pmlSumABC'
+      'body': 'SumABC{$1A}{B}{C} '
+  'ProductABeqCD':
+      'prefix': 'pmlProductABeqCD'
+      'body': 'ProductABeqCD{$1A}{B}{C}{D} '
+  'ProductABC':
+      'prefix': 'pmlProductABC'
+      'body': 'ProductABC{$1A}{B}{C} '
+  'ProductQuantityABC':
+      'prefix': 'pmlProductQuantityABC'
+      'body': 'ProductQuantityABC{$1A}{B}{C} '
+  'ProductAnBC':
+      'prefix': 'pmlProductAnBC'
+      'body': 'ProductAnBC{$1A}{B}{C}#INSERTION '
+  'ProductQuantityAnBC':
+      'prefix': 'pmlProductQuantityAnBC'
+      'body': 'ProductQuantityAnBC{$1A}{B}{C} '
+  'FractionABCD':
+      'prefix': 'pmlFractionABCD'
+      'body': 'FractionABCD{$1A}{B}{C}{D} '
+  'Fraction_AxB_dCeqD':
+      'prefix': 'pmlFraction_AxB_dCeqD'
+      'body': 'Fraction_AxB_dCeqD{$1A}{B}{C}{D} '
+  'FractionAeqBx_CdD_':
+      'prefix': 'pmlFractionAeqBx_CdD_'
+      'body': 'FractionAeqBx_CdD_{$1A}{B}{C}{D} '
+  'FractionABC':
+      'prefix': 'pmlFractionABC'
+      'body': 'FractionABC{$1A}{B}{C} '
+  'FractionQuantityABC':
+      'prefix': 'pmlFractionQuantityABC'
+      'body': 'FractionQuantityABC{$1A}{B}{C} '
+  'FractionBdAeqC':
+      'prefix': 'pmlFractionBdAeqC'
+      'body': 'FractionBdAeqC{$1A}{B}{C} '
+  'FractionQuantityBdAeqC':
+      'prefix': 'pmlFractionQuantityBdAeqC'
+      'body': 'FractionQuantityBdAeqC{$1A}{B}{C} '
+  'EqualityAssertion':
+      'prefix': 'pmlEqualityAssertion'
+      'body': 'EqualityAssertion{$1A}{B} '
+  'AccumulateRelationship':
+      'prefix': 'pmlAccumulateRelationship'
+      'body': 'AccumulateRelationship{$1A}{B}{C} '
+  'EfficiencyCalc':
+      'prefix': 'pmlEfficiencyCalc'
+      'body': 'EfficiencyCalc{$1A}{B} '
+  'FileName':
+      'prefix': 'pmlFileName'
+      'body': 'FileName: $1TheTitle  '
+  'WebTitle':
+      'prefix': 'pmlWebTitle'
+      'body': 'WebTitle{$1TheTitle} '
+  'StepHeader':
+      'prefix': 'pmlStepHeader'
+      'body': 'StepHeader{$1TheHeader} '
+  'ThinkHeader':
+      'prefix': 'pmlThinkHeader'
+      'body': 'ThinkHeader{$1TheHeader} '
+  'TeacherOne':
+      'prefix': 'pmlTeacherOne'
+      'body': 'TeacherOne{$1TheWords} '
+  'TeacherTwo':
+      'prefix': 'pmlTeacherTwo'
+      'body': 'TeacherTwo{$1TheWords} '
+  'TeacherThree':
+      'prefix': 'pmlTeacherThree'
+      'body': 'TeacherThree{$1TheWords} '
+  'TeacherSpeak':
+      'prefix': 'pmlTeacherSpeak'
+      'body': 'TeacherSpeak{$1TheWords} '
+  'TeacherTip':
+      'prefix': 'pmlTeacherTip'
+      'body': 'TeacherTip{$1TheWords} '
+  'PupilSpeak':
+      'prefix': 'pmlPupilSpeak'
+      'body': 'PupilSpeak{$1TheName}{TheWords} '
+  'JustSpeak':
+      'prefix': 'pmlJustSpeak'
+      'body': 'JustSpeak{$1TheWords} '
+  'WrongTrack':
+      'prefix': 'pmlWrongTrack'
+      'body': 'WrongTrack{$1TheWords} '
+  'RightLines':
+      'prefix': 'pmlRightLines'
+      'body': 'RightLines{$1TheWords} '
+  'AttributeThis':
+      'prefix': 'pmlAttributeThis'
+      'body': 'AttributeThis{$1TheAttribution} '
+  'QuoteThis':
+      'prefix': 'pmlQuoteThis'
+      'body': 'QuoteThis{$1ThePhrase} '
+  'EmphasiseThis':
+      'prefix': 'pmlEmphasiseThis'
+      'body': 'EmphasiseThis{$1ThePhrase} '
+  'QuotationThis':
+      'prefix': 'pmlQuotationThis'
+      'body': 'QuotationThis{$1ThePhrase} '
+  'SafetyTested':
+      'prefix': 'pmlSafetyTested'
+      'body': 'SafetyTested{vTheTestDetails} '
+  'SafetyTip':
+      'prefix': 'pmlSafetyTip'
+      'body': 'SafetyTip{$1TheWords} '
