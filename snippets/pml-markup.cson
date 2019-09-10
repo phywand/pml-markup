@@ -1,178 +1,178 @@
 '.text.physics.pml':
   'InsertGraphic':
-    'prefix': 'pmlInsertGraphic'
+    'prefix': 'InsertGraphic'
     'body': 'InsertGraphic{$1locallink}'
   'InsertLink':
-    'prefix': 'pmlInsertLink'
+    'prefix': 'InsertLink'
     'body': 'InsertLink{$1locallink}'
   'QuantitySub':
     'prefix': 'QuantitySub'
     'body': 'QuantitySub{$1letter}{subscript} '
   'QuantitySuper':
-      'prefix': 'pmlQuantitySuper'
+      'prefix': 'QuantitySuper'
       'body': 'QuantitySuper{$1letter}{superscript} '
   'WordSub':
-      'prefix': 'pmlWordSub'
+      'prefix': 'WordSub'
       'body': 'WordSub{$1phrase}{subscript} '
   'WordSuper':
-      'prefix': 'pmlWordSuper'
+      'prefix': 'WordSuper'
       'body': 'WordSuper{$1phrase}{superscript} '
   'NPNucleus':
-      'prefix': 'pmlNPNucleus'
+      'prefix': 'NPNucleus'
       'body': 'NPNucleus{$1nucleonNumber}{protonNumber}{nucleus} '
   'VectorOver':
-      'prefix': 'pmlVectorOver'
+      'prefix': 'VectorOver'
       'body': 'VectorOver{$1letter} '
   'VectorSub':
-      'prefix': 'pmlVectorSub'
+      'prefix': 'VectorSub'
       'body': 'VectorSub{$1letter}{subscript} '
   'VectorMagnitude':
-      'prefix': 'pmlVectorMagnitude'
+      'prefix': 'VectorMagnitude'
       'body': 'VectorMagnitude{$1letter} '
   'QuantitySymbol':
-      'prefix': 'pmlQuantitySymbol'
+      'prefix': 'QuantitySymbol'
       'body': 'QuantitySymbol{$1letter} '
   'QuantityUnit':
-      'prefix': 'pmlQuantityUnit'
+      'prefix': 'QuantityUnit'
       'body': 'QuantityUnit{$1number}{unit} '
   'QuantityExponent':
-      'prefix': 'pmlQuantityExponent'
+      'prefix': 'QuantityExponent'
       'body': 'QuantityExponent{$1number}{exponent}{unit} '
   'QuantityRange':
-      'prefix': 'pmlQuantityRange'
+      'prefix': 'QuantityRange'
       'body': 'QuantityRange{$1start}{end}{unit} '
   'QuantityValue':
-      'prefix': 'pmlQuantityValue'
+      'prefix': 'QuantityValue'
       'body': 'QuantityValue{$1letter}{number}{unit} '
   'QuantityOrder':
-      'prefix': 'pmlQuantityOrder'
+      'prefix': 'QuantityOrder'
       'body': 'QuantityOrder{$1letter}{exponent}{unit} '
   'JustUnit':
-      'prefix': 'pmlJustUnit'
+      'prefix': 'JustUnit'
       'body': 'JustUnit{$1unit} '
   'GroupBlock':
-      'prefix': 'pmlGroupBlock'
+      'prefix': 'GroupBlock'
       'body': 'GroupBlock{$1ThePhrase} '
   'FractionBlock':
-      'prefix': 'pmlFractionBlock'
+      'prefix': 'FractionBlock'
       'body': 'FractionBlock{$1word}{word} '
   'QuantityRoot':
-      'prefix': 'pmlQuantityRoot'
+      'prefix': 'QuantityRoot'
       'body': 'QuantityRoot{$1letter} '
   'FractionRoot':
-      'prefix': 'pmlFractionRoot'
+      'prefix': 'FractionRoot'
       'body': 'FractionRoot{$1letter}{letter} '
   'FractionQuantity':
-      'prefix': 'pmlFractionQuantity'
+      'prefix': 'FractionQuantity'
       'body': 'FractionBlock{$1QuantitySymbol{letter}}{QuantitySymbol{letter}} '
   'FractionQuantitysuper':
-      'prefix': 'pmlFractionQuantitysuper'
+      'prefix': 'FractionQuantitysuper'
       'body': 'FractionBlock{$1QuantitySuper{letter}{superscript}}{QuantitySuper{letter}{superscript}} '
   'DifferenceABC':
-      'prefix': 'pmlDifferenceABC'
+      'prefix': 'DifferenceABC'
       'body': 'DifferenceABC{$1A}{B}{C} '
   'SumABC':
-      'prefix': 'pmlSumABC'
+      'prefix': 'SumABC'
       'body': 'SumABC{$1A}{B}{C} '
   'ProductABeqCD':
-      'prefix': 'pmlProductABeqCD'
+      'prefix': 'ProductABeqCD'
       'body': 'ProductABeqCD{$1A}{B}{C}{D} '
   'ProductABC':
-      'prefix': 'pmlProductABC'
+      'prefix': 'ProductABC'
       'body': 'ProductABC{$1A}{B}{C} '
   'ProductQuantityABC':
-      'prefix': 'pmlProductQuantityABC'
+      'prefix': 'ProductQuantityABC'
       'body': 'ProductQuantityABC{$1A}{B}{C} '
   'ProductAnBC':
-      'prefix': 'pmlProductAnBC'
+      'prefix': 'ProductAnBC'
       'body': 'ProductAnBC{$1A}{B}{C}#INSERTION '
   'ProductQuantityAnBC':
-      'prefix': 'pmlProductQuantityAnBC'
+      'prefix': 'ProductQuantityAnBC'
       'body': 'ProductQuantityAnBC{$1A}{B}{C} '
   'FractionABCD':
-      'prefix': 'pmlFractionABCD'
+      'prefix': 'FractionABCD'
       'body': 'FractionABCD{$1A}{B}{C}{D} '
   'Fraction_AxB_dCeqD':
-      'prefix': 'pmlFraction_AxB_dCeqD'
+      'prefix': 'Fraction_AxB_dCeqD'
       'body': 'Fraction_AxB_dCeqD{$1A}{B}{C}{D} '
   'FractionAeqBx_CdD_':
-      'prefix': 'pmlFractionAeqBx_CdD_'
+      'prefix': 'FractionAeqBx_CdD_'
       'body': 'FractionAeqBx_CdD_{$1A}{B}{C}{D} '
   'FractionABC':
-      'prefix': 'pmlFractionABC'
+      'prefix': 'FractionABC'
       'body': 'FractionABC{$1A}{B}{C} '
   'FractionQuantityABC':
-      'prefix': 'pmlFractionQuantityABC'
+      'prefix': 'FractionQuantityABC'
       'body': 'FractionQuantityABC{$1A}{B}{C} '
   'FractionBdAeqC':
-      'prefix': 'pmlFractionBdAeqC'
+      'prefix': 'FractionBdAeqC'
       'body': 'FractionBdAeqC{$1A}{B}{C} '
   'FractionQuantityBdAeqC':
-      'prefix': 'pmlFractionQuantityBdAeqC'
+      'prefix': 'FractionQuantityBdAeqC'
       'body': 'FractionQuantityBdAeqC{$1A}{B}{C} '
   'EqualityAssertion':
-      'prefix': 'pmlEqualityAssertion'
+      'prefix': 'EqualityAssertion'
       'body': 'EqualityAssertion{$1A}{B} '
   'AccumulateRelationship':
-      'prefix': 'pmlAccumulateRelationship'
+      'prefix': 'AccumulateRelationship'
       'body': 'AccumulateRelationship{$1A}{B}{C} '
   'EfficiencyCalc':
-      'prefix': 'pmlEfficiencyCalc'
+      'prefix': 'EfficiencyCalc'
       'body': 'EfficiencyCalc{$1A}{B} '
   'FileName':
-      'prefix': 'pmlFileName'
+      'prefix': 'FileName'
       'body': 'FileName: $1TheTitle  '
   'WebTitle':
-      'prefix': 'pmlWebTitle'
+      'prefix': 'WebTitle'
       'body': 'WebTitle{$1TheTitle} '
   'StepHeader':
-      'prefix': 'pmlStepHeader'
+      'prefix': 'StepHeader'
       'body': 'StepHeader{$1TheHeader} '
   'ThinkHeader':
-      'prefix': 'pmlThinkHeader'
+      'prefix': 'ThinkHeader'
       'body': 'ThinkHeader{$1TheHeader} '
   'TeacherOne':
-      'prefix': 'pmlTeacherOne'
+      'prefix': 'TeacherOne'
       'body': 'TeacherOne{$1TheWords} '
   'TeacherTwo':
-      'prefix': 'pmlTeacherTwo'
+      'prefix': 'TeacherTwo'
       'body': 'TeacherTwo{$1TheWords} '
   'TeacherThree':
-      'prefix': 'pmlTeacherThree'
+      'prefix': 'TeacherThree'
       'body': 'TeacherThree{$1TheWords} '
   'TeacherSpeak':
-      'prefix': 'pmlTeacherSpeak'
+      'prefix': 'TeacherSpeak'
       'body': 'TeacherSpeak{$1TheWords} '
   'TeacherTip':
-      'prefix': 'pmlTeacherTip'
+      'prefix': 'TeacherTip'
       'body': 'TeacherTip{$1TheWords} '
   'PupilSpeak':
-      'prefix': 'pmlPupilSpeak'
+      'prefix': 'PupilSpeak'
       'body': 'PupilSpeak{$1TheName}{TheWords} '
   'JustSpeak':
-      'prefix': 'pmlJustSpeak'
+      'prefix': 'JustSpeak'
       'body': 'JustSpeak{$1TheWords} '
   'WrongTrack':
-      'prefix': 'pmlWrongTrack'
+      'prefix': 'WrongTrack'
       'body': 'WrongTrack{$1TheWords} '
   'RightLines':
-      'prefix': 'pmlRightLines'
+      'prefix': 'RightLines'
       'body': 'RightLines{$1TheWords} '
   'AttributeThis':
-      'prefix': 'pmlAttributeThis'
+      'prefix': 'AttributeThis'
       'body': 'AttributeThis{$1TheAttribution} '
   'QuoteThis':
-      'prefix': 'pmlQuoteThis'
+      'prefix': 'QuoteThis'
       'body': 'QuoteThis{$1ThePhrase} '
   'EmphasiseThis':
-      'prefix': 'pmlEmphasiseThis'
+      'prefix': 'EmphasiseThis'
       'body': 'EmphasiseThis{$1ThePhrase} '
   'QuotationThis':
-      'prefix': 'pmlQuotationThis'
+      'prefix': 'QuotationThis'
       'body': 'QuotationThis{$1ThePhrase} '
   'SafetyTested':
-      'prefix': 'pmlSafetyTested'
+      'prefix': 'SafetyTested'
       'body': 'SafetyTested{vTheTestDetails} '
   'SafetyTip':
-      'prefix': 'pmlSafetyTip'
+      'prefix': 'SafetyTip'
       'body': 'SafetyTip{$1TheWords} '

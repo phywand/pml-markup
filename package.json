@@ -1,12 +1,42 @@
 {
-  "name": "pml-markup",
-  "version": "1.0.1",
+  "_from": "https://www.atom.io/api/packages/pml-markup/versions/1.0.1/tarball",
+  "_id": "pml-markup@1.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-3Xd3n01ZB+F+TKFKprlFRn9QG27Jk9ho7i9meJR69nl3amqxkp0lofeXk2JTKcFLiCA8H9FjXwgR8h3/PW8JMA==",
+  "_location": "/pml-markup",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/pml-markup/versions/1.0.1/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/pml-markup/versions/1.0.1/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/pml-markup/versions/1.0.1/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/pml-markup/versions/1.0.1/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/pml-markup/versions/1.0.1/tarball",
+  "_shasum": "102d8b11b3f0189be65ab75b7a9f8f5010872b18",
+  "_spec": "https://www.atom.io/api/packages/pml-markup/versions/1.0.1/tarball",
+  "_where": "/private/var/folders/6_/b30w4d_50676y1pxklxb29x40000gn/T/apm-install-dir-119810-1328-1jiei86.6nmb",
+  "bugs": {
+    "url": "https://github.com/phywand/pml-markup/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
   "description": "A means to markup pml files",
-  "keywords": [],
-  "repository": "https://github.com/phywand/pml-markup.git",
-  "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {}
+  "homepage": "https://github.com/phywand/pml-markup#readme",
+  "keywords": [],
+  "license": "MIT",
+  "name": "pml-markup",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phywand/pml-markup.git"
+  },
+  "version": "1.0.2"
 }

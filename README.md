@@ -1,5 +1,5 @@
 # pml-markup package
 
-Now live and kicking.
+experimental: more to follow
 
 ![In action- just coloured](http://supportingphysicsteaching.net/__blogimg/pmlPic.png)
